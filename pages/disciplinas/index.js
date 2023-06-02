@@ -22,7 +22,11 @@ const index = () => {
     }
 
 function excluir(id){
-    axios.delete('/api/disciplinas/' + id)
+    
+    if (confirm('Deseja realmente excluir o registro?')) {
+        axios.delete('/api/disciplinas/' + id)
+        getAll()
+    }
 }
 
     return (
