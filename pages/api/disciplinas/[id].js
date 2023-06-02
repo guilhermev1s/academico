@@ -22,7 +22,6 @@ get(child(ref(db), 'disciplinas')).then(snapshot=>{
 
 } else if (req.method == 'PUT') {
 
-    const uuid = v4()
     const dados = req.body
     dados.id = uuid
   
@@ -34,5 +33,4 @@ get(child(ref(db), 'disciplinas')).then(snapshot=>{
 
 }
 
-  
 }
